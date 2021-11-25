@@ -7,7 +7,7 @@ from torchvision import models
 import numpy as np
 from PIL import Image, ImageTk
 import tkinter.font as tkFont
-"""Written by CaTe"""
+"""Written by Cate"""
 
 df = pd.read_csv('label.csv')
 # 14行加载自己的训练好的模型，15行使用自己的预处理方式
@@ -42,7 +42,7 @@ def predict():
 
 
 root = Tk()
-root.title('Pic Predict GUI(Written by CaTe)')
+root.title('Pic Predict GUI(Written by Cate)')
 root.geometry("800x600")
 var = StringVar()
 
