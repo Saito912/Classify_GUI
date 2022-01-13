@@ -7,7 +7,7 @@ from torchvision import models
 import numpy as np
 from PIL import Image, ImageTk
 import tkinter.font as tkFont
-"""Written by Cate"""
+"""Written by Cai"""
 
 df = pd.read_csv('label.csv')
 # 14行加载自己的训练好的模型，15行使用自己的预处理方式
