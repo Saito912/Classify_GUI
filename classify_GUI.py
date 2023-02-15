@@ -25,7 +25,7 @@ with torch.no_grad():
                 'efficient_v2_l': models.efficientnet_v2_l(pretrained=True),
                 'efficient_v2_m': models.efficientnet_v2_m(pretrained=True),
                 'efficient_v2_s': models.efficientnet_v2_s(pretrained=True)}
-    # 14行加载自己的训练好的模型，15行使用自己的预处理方式
+
     trans = transforms.Compose([transforms.ToTensor(),
                                 transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
                                 ])
@@ -108,10 +108,9 @@ with torch.no_grad():
                         values=['resnet18', 'resnet50', 'resnet101', 'mobilenetv2', 'mobilenetv3_l', 'mobilenetv3_s',
                                 'vgg11', 'vgg16', 'googlenet', 'efficient_v1', 'efficient_v2_l', 'efficient_v2_m',
                                 'efficient_v2_s'], font=pre_Style)
-    bbox.set('resnet18')  # 设置默认值为苹果
+    bbox.set('resnet18')
     bbox.place(relx=0.69, rely=0.06, anchor='nw', relwidth=0.3, relheight=0.08)
 
-    # 品质的标签
     pre_label = Label(root, text='预测结果: ', font=pre_Style)
     pre_label.place(relx=0.53, rely=0.2, anchor='nw', relwidth=0.15, relheight=0.08)
 
